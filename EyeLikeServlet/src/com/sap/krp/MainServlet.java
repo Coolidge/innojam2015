@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class MainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -24,7 +26,13 @@ public class MainServlet extends HttpServlet {
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		response.setContentType("application/json");        
         
-        response.getWriter().println(data.toJSON());
+		String jsonResponse;
+		if (StringUtils.isEmpty(data.getValue())) {
+			jsonResponse = data.toJsonRandomVal();
+		} else {
+			jsonResponse = data.toJSON();
+		}
+		response.getWriter().println(jsonResponse);
 	}
 	
 	/**
