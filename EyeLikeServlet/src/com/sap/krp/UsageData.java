@@ -5,12 +5,18 @@ import java.util.Random;
 public class UsageData {
 
 	private String value;
+	private static UsageData instance = null;
+	private int maxParticipants;
 
-	public UsageData(String value) {
-		this.value = value;
+	public static synchronized UsageData getInstance() {
+		if (instance == null) {
+			instance = new UsageData();
+		}
+		return instance;
 	}
-
-	public UsageData() {
+	
+	private UsageData() {
+		maxParticipants = 0;
 	}
 
 	public String getValue() {
@@ -19,6 +25,8 @@ public class UsageData {
 
 	public void setValue(String value) {
 		this.value = value;
+		Integer currentValue = Integer.valueOf(value);
+		maxParticipants = maxParticipants >= currentValue ? maxParticipants : currentValue; 
 	}
 
 	private String toJSON(String val) {
@@ -30,7 +38,8 @@ public class UsageData {
 	}
 	
 	public String toJSON() {
-		return this.toJSON(value);
+		int currentVal = (int) ((Float.valueOf(value) / (float)maxParticipants) * 100);
+		return this.toJSON(String.valueOf(currentVal));
 	}
 	
 	public String toJsonRandomVal() {

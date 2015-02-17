@@ -13,10 +13,11 @@ import org.apache.commons.lang3.StringUtils;
 public class MainServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	private UsageData data = new UsageData();
+	private UsageData data;
 	
     public MainServlet() {
         super();
+        data = UsageData.getInstance();
     }
 
     /**
@@ -47,7 +48,7 @@ public class MainServlet extends HttpServlet {
             if (parameterMap.containsKey("value")) {
                 value = parameterMap.get("value")[0];
             }
-            data = new UsageData(value);
+            data.setValue(value);
         }
     }
 }
