@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ampel
+Bundle-SymbolicName: ampel
+Bundle-Version: 1.0.0.qualifier
+Export-Package: de.holger_oehm.usb,
+ de.holger_oehm.usb.hid,
+ de.holger_oehm.usb.hid.linux,
+ de.holger_oehm.usb.hid.windows,
+ de.holger_oehm.usb.leds
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
