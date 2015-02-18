@@ -1,9 +1,6 @@
 package pkg;
 
-
-import javax.swing.*;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -15,14 +12,21 @@ public class EyeLikeObserver {
     private static String WebServerURL = "https://eyelikei305845trial.hanatrial.ondemand.com/EyeLikeServlet/MainServlet";
     private static final int MonitorPeriod = 1 * 1000; // In seconds
     private static int maxParticipants = 4;
-    private static int read;
 
     public static void main(final String[] args) throws InterruptedException {
         FileHandler.filname = EngineDataFile;
         ProxyHandler.Init(WebServerURL);
+
+        if (LEDHandler.LEDS == null) {
+            System.err.println("No Leds connected.");
+            System.exit(0);
+            return;
+        }
+
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         executorService.execute(new Runnable() {
-            @Override public void run() {
+            @Override
+            public void run() {
                 allLights();
                 try {
                     Thread.sleep(1000);
@@ -48,7 +52,7 @@ public class EyeLikeObserver {
         });
         executorService.shutdown();
         try {
-            read = System.in.read();
+            System.in.read();
         } catch (IOException e) {
             e.printStackTrace();
         }

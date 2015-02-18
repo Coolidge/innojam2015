@@ -4,7 +4,7 @@ import de.holger_oehm.usb.leds.USBLeds;
 
 public class LEDHandler {
 
-    private static final USBLeds LEDS = USBLeds.Factory.enumerateLedDevices().next();
+    public static final USBLeds LEDS = USBLeds.Factory.enumerateLedDevices().next();
 
     public static void off() {
         LEDS.off();
