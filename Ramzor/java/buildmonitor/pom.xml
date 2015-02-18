@@ -20,10 +20,10 @@
 -->
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>de.holger_oehm.usb.cleware</groupId>
-	<artifactId>buildmonitor</artifactId>
+	<groupId>innojam</groupId>
+	<artifactId>ramzor</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>1</version>
 	<name>Build Monitor</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -66,7 +66,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>de.holger_oehm.xfd.BuildMonitor</mainClass>
+							<mainClass>pkg.EyeLikeObserver</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

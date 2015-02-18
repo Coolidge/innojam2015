@@ -56,16 +56,11 @@ void face_detector::detect_and_display(Mat frame)
 }
 
 void face_detector::write_to_file(int numberOfFaces)
-{
-	
-	if (!output_.is_open())
-	{		
+{		
 		output_.open(output_location_, ofstream::app);
-	}
-	output_ << to_string(numberOfFaces) + "\n";
+		output_ << to_string(numberOfFaces) + "\n";
+		output_.close();
 }
 
 face_detector::~face_detector()
-{
-	output_.close();
-}
+{}

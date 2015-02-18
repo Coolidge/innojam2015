@@ -4,9 +4,9 @@ package pkg;
 public class EyeLikeObserver {
 
     // Configurations:
-    private static String EngineDataFile = "C:\\Cloud\\eyeLike\\Shared\\data.txt";
+    private static String EngineDataFile = "data.txt";
     private static String WebServerURL = "https://eyelikei305845trial.hanatrial.ondemand.com/EyeLikeServlet/MainServlet";
-    private final int MonitorPeriod = 5 * 1000; // In seconds
+    private final int MonitorPeriod = 1 * 1000; // In seconds
     private int maxParticipants = 4;
 
     public static void main(final String[] args) throws InterruptedException {
