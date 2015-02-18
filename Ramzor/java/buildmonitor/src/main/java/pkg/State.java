@@ -1,4 +1,4 @@
-package de.holger_oehm.xfd.jenkins;
+package pkg;
 
 public enum State {
     RED, YELLOW, GREEN

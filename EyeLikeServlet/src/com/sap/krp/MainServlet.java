@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang3.StringUtils;
 
 public class MainServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-	private UsageData data;
-	
+    private static final long serialVersionUID = 1L;
+
+    private UsageData data;
+
     public MainServlet() {
         super();
         data = UsageData.getInstance();
@@ -23,25 +23,25 @@ public class MainServlet extends HttpServlet {
     /**
      * Update Client
      */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setHeader("Access-Control-Allow-Origin", "*");
-		response.setContentType("application/json");        
-        
-		String jsonResponse;
-		if (StringUtils.isEmpty(data.getValue())) {
-			jsonResponse = data.toJsonRandomVal();
-		} else {
-			jsonResponse = data.toJSON();
-		}
-		response.getWriter().println(jsonResponse);
-	}
-	
-	/**
-	 * Receive data from Engine
-	 */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setContentType("application/json");
+
+        String jsonResponse;
+        if (StringUtils.isEmpty(data.getValue())) {
+            jsonResponse = data.toJsonRandomVal();
+        } else {
+            jsonResponse = data.toJSON();
+        }
+        response.getWriter().println(jsonResponse);
+    }
+
+    /**
+     * Receive data from Engine
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	response.setHeader("Access-Control-Allow-Origin", "*");
-    	
+        response.setHeader("Access-Control-Allow-Origin", "*");
+
         Map<String, String[]> parameterMap = request.getParameterMap();
         if (parameterMap != null) {
             String value = null;
@@ -50,7 +50,7 @@ public class MainServlet extends HttpServlet {
             }
             data.setValue(value);
         }
+
+        response.getWriter().println("{\"result\": \"OK\"}");
     }
 }
-
-

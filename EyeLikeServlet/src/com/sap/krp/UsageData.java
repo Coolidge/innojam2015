@@ -6,7 +6,6 @@ public class UsageData {
 
 	private String value;
 	private static UsageData instance = null;
-	private int maxParticipants;
 
 	public static synchronized UsageData getInstance() {
 		if (instance == null) {
@@ -15,18 +14,12 @@ public class UsageData {
 		return instance;
 	}
 	
-	private UsageData() {
-		maxParticipants = 0;
-	}
-
 	public String getValue() {
 		return value;
 	}
 
 	public void setValue(String value) {
 		this.value = value;
-		Integer currentValue = Integer.valueOf(value);
-		maxParticipants = maxParticipants >= currentValue ? maxParticipants : currentValue; 
 	}
 
 	private String toJSON(String val) {
@@ -38,8 +31,7 @@ public class UsageData {
 	}
 	
 	public String toJSON() {
-		int currentVal = (int) ((Float.valueOf(value) / (float)maxParticipants) * 100);
-		return this.toJSON(String.valueOf(currentVal));
+		return this.toJSON(value);
 	}
 	
 	public String toJsonRandomVal() {

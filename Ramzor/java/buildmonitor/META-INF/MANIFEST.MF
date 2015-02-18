@@ -4,5 +4,5 @@ Bundle-Name: Buildmonitor
 Bundle-SymbolicName: buildmonitor
 Bundle-Version: 1.0.0.qualifier
 Export-Package: de.holger_oehm.xfd,
- de.holger_oehm.xfd.jenkins
+ pkg
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
