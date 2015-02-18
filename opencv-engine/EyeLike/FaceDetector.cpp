@@ -51,6 +51,7 @@ void face_detector::detect_and_display(Mat frame)
 		write_to_file(saved_faces_);
 	}
 	imshow(window_name_, frame);
+	setWindowProperty(window_name_, CV_WND_PROP_ASPECTRATIO, 1);
 }
 
 void face_detector::write_to_file(int numberOfFaces)

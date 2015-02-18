@@ -13,7 +13,7 @@ int main(void)
 {
 	VideoCapture capture;
 	Mat frame;
-	String face_cascade_name = "haarcascade_frontalface_alt.xml";
+	String face_cascade_name = "haarcascade_frontalface_default.xml";
 	String eyes_cascade_name = "haarcascade_eye_tree_eyeglasses.xml";	
 	auto face_cascade = CascadeClassifier();
 	auto eyes_cascade = CascadeClassifier();
@@ -30,7 +30,9 @@ int main(void)
 	auto faceDetector = face_detector(face_cascade, eyes_cascade);
 	
 	//-- 2. Read the video stream
-	capture.open(-1);
+	capture.set(CV_CAP_PROP_FRAME_WIDTH, 1280);
+	capture.set(CV_CAP_PROP_FRAME_HEIGHT, 720);
+	capture.open(0);
 	if (!capture.isOpened()) { printf("--(!)Error opening video capture\n"); return -1; }
 
 	while (capture.read(frame))
