@@ -32,4 +32,8 @@ public class LEDHandler {
         }
 
     }
+
+    public static void allLights() {
+        LEDS.set(USBLeds.LedColor.RED, USBLeds.LedColor.YELLOW, USBLeds.LedColor.GREEN);
+    }
 }

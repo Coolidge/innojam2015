@@ -3,8 +3,6 @@
 #include <opencv2/contrib/contrib.hpp>
 #include <fstream>
 
-ofstream output_;
-
 face_detector::face_detector(CascadeClassifier face_cascade, CascadeClassifier eyes_cascade)
 {
 	face_cascade_ = face_cascade;
@@ -56,10 +54,11 @@ void face_detector::detect_and_display(Mat frame)
 }
 
 void face_detector::write_to_file(int numberOfFaces)
-{		
-		output_.open(output_location_, ofstream::app);
-		output_ << to_string(numberOfFaces) + "\n";
-		output_.close();
+{
+	ofstream output_;
+	output_.open(output_location_, ofstream::app);
+	output_ << to_string(numberOfFaces) + "\n";
+	output_.close();
 }
 
 face_detector::~face_detector()
