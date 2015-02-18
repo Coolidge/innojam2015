@@ -23,5 +23,5 @@ public class FileHandler {
         String val = s.toString().trim();
         System.out.println("Last line in File:" + val);
         return val;
-    }
+    }    
 }

@@ -9,14 +9,16 @@ public class EyeLikeObserver {
     private final int MonitorPeriod = 5 * 1000; // In seconds
     private int maxParticipants = 4;
 
-    public static void main(final String[] args) {
+    public static void main(final String[] args) throws InterruptedException {
         FileHandler.filname = EngineDataFile;
         ProxyHandler.Init(WebServerURL);
         new EyeLikeObserver().run();
     }
 
-    private void run() {
+    private void run() throws InterruptedException {
         LEDHandler.off();
+        Thread.sleep(1000);
+
         do {
             try {
                 String lastValue = FileHandler.getLastLine();
@@ -25,10 +27,6 @@ public class EyeLikeObserver {
                 ProxyHandler.postValue(percentage);
 
                 Thread.sleep(MonitorPeriod);
-
-            } catch (final InterruptedException interrupt) {
-                Thread.currentThread().interrupt();
-                LEDHandler.off();
 
             } catch (final Exception e) {
                 System.err.println(e.getMessage());
