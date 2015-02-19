@@ -1,0 +1,463 @@
+[
+  {
+    "slug": "ted",
+    "name": "A rich life with less stuff - TED",
+    "key_frame": 93,
+    "youtube": "GgBpyNsS-jU",
+    "intro": "Minimalism, the value of community, and discovering what makes people rich",
+    "annotations": [
+      {
+      }
+    ],
+    "fps": 29.97002997002997,
+    "movie_length_frames": 175620,
+    "movie_length_ms": 7324826,
+    "search_bounds": [
+      0,
+      167083
+    ],
+    "bounds_ms": [
+      15812,
+      6967778
+    ],
+    "trailer": {
+      "thumb_width": 266,
+      "trailer_length_frames": 3793,
+      "trailer_length_ms": 151235,
+      "shots": [
+        {
+          "start_ms": 0,
+          "match_ms": 351705,
+          "suppress": true
+        },
+        {
+          "start_ms": 6000,
+          "match_ms": 351705
+        },
+        {
+          "start_ms": 7042,
+          "match_ms": 351705
+        },
+        {
+          "start_ms": 8583,
+          "match_ms": 357311
+        },
+        {
+          "start_ms": 10167,
+          "match_ms": 999724
+        },
+        {
+          "start_ms": 11792,
+          "match_ms": 999724
+        },
+        {
+          "start_ms": 13375,
+          "match_ms": 996158
+        },
+        {
+          "start_ms": 14561,
+          "match_ms": 997922
+        },
+        {
+          "start_ms": 15875,
+          "match_ms": 1102199
+        },
+        {
+          "start_ms": 16959,
+          "match_ms": 1102199
+        },
+        {
+          "start_ms": 17917,
+          "match_ms": 1102199
+        },
+        {
+          "start_ms": 19167,
+          "match_ms": 1102199
+        },
+        {
+          "start_ms": 20917,
+          "match_ms": 2292591
+        },
+        {
+          "start_ms": 21500,
+          "match_ms": 2292591
+        },
+        {
+          "start_ms": 22500,
+          "match_ms": 2292591
+        },
+        {
+          "start_ms": 22917,
+          "match_ms": 2292591
+        },
+        {
+          "start_ms": 23436,
+          "match_ms": 1734563
+        },
+        {
+          "start_ms": 23937,
+          "match_ms": 1734563
+        },
+        {
+          "start_ms": 24395,
+          "match_ms": 1734563
+        },
+        {
+          "start_ms": 26417,
+          "match_ms": 1734563
+        },
+        {
+          "start_ms": 30167,
+          "match_ms": 1545467
+        },
+        {
+          "start_ms": 31208,
+          "match_ms": 1545467
+        },
+        {
+          "start_ms": 34417,
+          "match_ms": 1545467
+        },
+        {
+          "start_ms": 36208,
+          "match_ms": 1954543
+        },
+        {
+          "start_ms": 38292,
+          "match_ms": 1954543
+        },
+        {
+          "start_ms": 39667,
+          "match_ms": 1954543
+        },
+        {
+          "start_ms": 40667,
+          "match_ms": 1954543
+        },
+        {
+          "start_ms": 41959,
+          "match_ms": 1745234
+        },
+        {
+          "start_ms": 43250,
+          "match_ms": 1745234
+        },
+        {
+          "start_ms": 44042,
+          "match_ms": 1745234
+        },
+        {
+          "start_ms": 46000,
+          "match_ms": 2590333
+        },
+        {
+          "start_ms": 47792,
+          "match_ms": 2590333
+        },
+        {
+          "start_ms": 49750,
+          "match_ms": 2790333
+        },
+        {
+          "start_ms": 52167,
+          "match_ms": 2790333
+        },
+        {
+          "start_ms": 53042,
+          "match_ms": 2990333
+        },
+        {
+          "start_ms": 53834,
+          "match_ms": 2990333
+        },
+        {
+          "start_ms": 54667,
+          "match_ms": 2990333
+        },
+        {
+          "start_ms": 56084,
+          "match_ms": 2990333
+        },
+        {
+          "start_ms": 57501,
+          "match_ms": 2521341
+        },
+        {
+          "start_ms": 58937,
+          "match_ms": 3521341
+        },
+        {
+          "start_ms": 60209,
+          "match_ms": 3521341
+        },
+        {
+          "start_ms": 61520,
+          "match_ms": 3234335
+        },
+        {
+          "start_ms": 62043,
+          "match_ms": 4234335
+        },
+        {
+          "start_ms": 62959,
+          "match_ms": 4521341
+        },
+        {
+          "start_ms": 63668,
+          "match_ms": 4521341
+        },
+        {
+          "start_ms": 64876,
+          "match_ms": 5690333
+        },
+        {
+          "start_ms": 66042,
+          "match_ms": 5690333
+        },
+        {
+          "start_ms": 68334,
+          "match_ms": 5690333
+        },
+        {
+          "start_ms": 70834,
+          "match_ms": 6690333
+        },
+        {
+          "start_ms": 71667,
+          "match_ms": 6690333
+        },
+        {
+          "start_ms": 72500,
+          "match_ms": 6690333
+        },
+        {
+          "start_ms": 74125,
+          "match_ms": 5290333
+        },
+        {
+          "start_ms": 75084,
+          "match_ms": 5290333
+        },
+        {
+          "start_ms": 75708,
+          "match_ms": 5290333
+        },
+        {
+          "start_ms": 76583,
+          "match_ms": 5290333
+        },
+        {
+          "start_ms": 78333,
+          "match_ms": 687088
+        },
+        {
+          "start_ms": 79625,
+          "match_ms": 2466242
+        },
+        {
+          "start_ms": 81000,
+          "match_ms": 2668211
+        },
+        {
+          "start_ms": 83541,
+          "match_ms": 2874250
+        },
+        {
+          "start_ms": 86791,
+          "match_ms": 3056464
+        },
+        {
+          "start_ms": 88376,
+          "match_ms": 3056464
+        },
+        {
+          "start_ms": 89999,
+          "match_ms": 3356464
+        },
+        {
+          "start_ms": 90916,
+          "match_ms": 3656464
+        },
+        {
+          "start_ms": 93041,
+          "match_ms": 2812775
+        },
+        {
+          "start_ms": 94791,
+          "match_ms": 2683705
+        },
+        {
+          "start_ms": 96624,
+          "match_ms": 2698221
+        },
+        {
+          "start_ms": 99790,
+          "match_ms": 1767996
+        },
+        {
+          "start_ms": 101082,
+          "match_ms": 1777280
+        },
+        {
+          "start_ms": 102582,
+          "match_ms": 3581822
+        },
+        {
+          "start_ms": 103707,
+          "match_ms": 3583724
+        },
+        {
+          "start_ms": 104581,
+          "match_ms": 3585718,
+          "modified": true,
+          "missing": true
+        },
+        {
+          "start_ms": 106081,
+          "match_ms": 1838244
+        },
+        {
+          "start_ms": 107122,
+          "match_ms": 1833865
+        },
+        {
+          "start_ms": 108081,
+          "match_ms": 1841147
+        },
+        {
+          "start_ms": 109957,
+          "match_ms": 4188631
+        },
+        {
+          "start_ms": 111706,
+          "match_ms": 3430462
+        },
+        {
+          "start_ms": 113081,
+          "match_ms": 3433398
+        },
+        {
+          "start_ms": 114081,
+          "match_ms": 3906107,
+          "missing": true
+        },
+        {
+          "start_ms": 115373,
+          "match_ms": 4090964
+        },
+        {
+          "start_ms": 117747,
+          "match_ms": 4278259
+        },
+        {
+          "start_ms": 118289,
+          "match_ms": 4295277
+        },
+        {
+          "start_ms": 122914,
+          "match_ms": 3216969
+        },
+        {
+          "start_ms": 123955,
+          "match_ms": 3219038
+        },
+        {
+          "start_ms": 124872,
+          "match_ms": 4503034
+        },
+        {
+          "start_ms": 126080,
+          "match_ms": 4533187
+        },
+        {
+          "start_ms": 127664,
+          "match_ms": 3506876
+        },
+        {
+          "start_ms": 129081,
+          "match_ms": 6187879
+        },
+        {
+          "start_ms": 129997,
+          "match_ms": 1549014
+        },
+        {
+          "start_ms": 131164,
+          "match_ms": 4586084
+        },
+        {
+          "start_ms": 132372,
+          "match_ms": 3531259
+        },
+        {
+          "start_ms": 133581,
+          "match_ms": 6715404
+        },
+        {
+          "start_ms": 134748,
+          "match_ms": 6717406
+        },
+        {
+          "start_ms": 135956,
+          "match_ms": 4139278,
+          "modified": true,
+          "missing": true
+        },
+        {
+          "start_ms": 136998,
+          "match_ms": 3956285
+        },
+        {
+          "start_ms": 137831,
+          "match_ms": 5052778
+        },
+        {
+          "start_ms": 138539,
+          "match_ms": 5034300
+        },
+        {
+          "start_ms": 139039,
+          "match_ms": 3213661
+        },
+        {
+          "start_ms": 139582,
+          "match_ms": 978601
+        },
+        {
+          "start_ms": 140164,
+          "match_ms": 578601
+        },
+        {
+          "start_ms": 141373,
+          "match_ms": 778601
+        },
+        {
+          "start_ms": 141748,
+          "match_ms": 978601
+        },
+        {
+          "start_ms": 142374,
+          "match_ms": 378601
+        },
+        {
+          "start_ms": 143040,
+          "match_ms": 578601
+        },
+        {
+          "start_ms": 145166,
+          "match_ms": 978601
+        },
+        {
+          "start_ms": 147046,
+          "match_ms": 0,
+          "suppress": true
+        },
+        {
+          "start_ms": 148697,
+          "match_ms": 0,
+          "suppress": true
+        }
+      ]
+    }
+  }
+ ]
