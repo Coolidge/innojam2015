@@ -2,7 +2,7 @@
 
 echo Run Ramzor
 cd Ramzor\java
-call mvn install
+REM call mvn install
 copy buildmonitor\target\ramzor-1-jar-with-dependencies.jar ..\..\opencv-engine\Release\
 cd ..\..\opencv-engine\Release\
 START java -jar ramzor-1-jar-with-dependencies.jar
