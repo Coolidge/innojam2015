@@ -10,14 +10,14 @@ using namespace std;
 
 
 
-class face_detector
+class FaceDetector
 {
 public:
-	face_detector(CascadeClassifier face_cascade, const CascadeClassifier eyes_cascade);
-	~face_detector();
-	void detect_and_display(Mat frame);
+	FaceDetector(CascadeClassifier& face_cascade, CascadeClassifier& eyes_cascade, double scale = 1, bool try_flip = false);
+	~FaceDetector();
+	void detect_and_display(Mat& frame);
 private:
-	void face_detector::write_to_file(int number_of_faces);
+	void FaceDetector::write_to_file(int number_of_faces);
 	String face_cascade_name_;
 	String eyes_cascade_name_;
 	CascadeClassifier face_cascade_;
@@ -25,6 +25,8 @@ private:
 	String window_name_;	
 	int saved_faces_;
 	String output_location_;
+	double scale_;
+	bool try_flip_;
 };
 
 
