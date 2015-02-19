@@ -1,0 +1,7 @@
+h1. Building
+
+In the java directory run:
+$ mvn clean install
+
+h1. Running
+java -jar Ramzor2.jar

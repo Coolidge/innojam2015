@@ -1,0 +1,16 @@
+﻿Build started 19/02/2015 11:24:16.
+     1>Project "C:\innojam2015\opencv-engine\EyeLike\EyeLike.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Programs\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\innojam2015\opencv-engine\packages\cpprestsdk.2.4.0.1\build\native\include\\" /IC:\opencv\build\x86\vc12\..\..\include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D HAS_CPPRESTSDK /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Programs\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\innojam2015\opencv-engine\Release\EyeLike.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\opencv\build\x86\vc12\lib "C:\innojam2015\opencv-engine\packages\cpprestsdk.2.4.0.1\build\native\lib\Win32\v120\Release\Desktop\cpprest120_2_4.lib" opencv_calib3d2410.lib opencv_contrib2410.lib opencv_core2410.lib opencv_features2d2410.lib opencv_flann2410.lib opencv_gpu2410.lib opencv_highgui2410.lib opencv_imgproc2410.lib opencv_legacy2410.lib opencv_ml2410.lib opencv_nonfree2410.lib opencv_objdetect2410.lib opencv_ocl2410.lib opencv_photo2410.lib opencv_stitching2410.lib opencv_superres2410.lib opencv_ts2410.lib opencv_video2410.lib opencv_videostab2410.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\innojam2015\opencv-engine\Release\EyeLike.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\innojam2015\opencv-engine\Release\EyeLike.lib" /MACHINE:X86 /SAFESEH Release\FaceDetector.obj
+         Release\main.obj
+         Generating code
+         Finished generating code
+         EyeLike.vcxproj -> C:\innojam2015\opencv-engine\Release\EyeLike.exe
+     1>Done Building Project "C:\innojam2015\opencv-engine\EyeLike\EyeLike.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.69
