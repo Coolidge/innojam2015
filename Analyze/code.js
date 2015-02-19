@@ -343,7 +343,7 @@
     d3.select(".lightbox")
         .style("display", "block")
       .select("iframe")
-        .attr("src", "http://www.youtube.com/embed/" + d.youtube + "?rel=0&autoplay=1");
+        .attr("src", "https://www.youtube.com/embed/" + d.youtube + "?rel=0&autoplay=1");
 
     d3.event.preventDefault();
   }
