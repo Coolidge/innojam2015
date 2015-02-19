@@ -1,7 +1,5 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/objdetect/objdetect.hpp>
-#include <cpprest/http_client.h>
-#include <cpprest/filestream.h>
 #include "FaceDetector.h"
 
 using namespace std;
@@ -13,10 +11,10 @@ int main(void)
 {
 	VideoCapture capture;
 	Mat frame;
-	String face_cascade_name = "haarcascade_frontalface_default.xml";
+	String face_cascade_name = "haarcascade_frontalface_alt_tree.xml";
 	String eyes_cascade_name = "haarcascade_eye_tree_eyeglasses.xml";	
-	auto face_cascade = CascadeClassifier();
-	auto eyes_cascade = CascadeClassifier();
+	CascadeClassifier face_cascade;
+	CascadeClassifier eyes_cascade;
 
 	//-- 1. Load the cascades
 	if (!face_cascade.load(face_cascade_name))
@@ -27,11 +25,10 @@ int main(void)
 	{
 		printf("--(!)Error loading eyes cascade\n"); return -1;
 	};
-	auto faceDetector = face_detector(face_cascade, eyes_cascade);
+	
+	FaceDetector face_detector(face_cascade, eyes_cascade, 1);	
 	
 	//-- 2. Read the video stream
-	capture.set(CV_CAP_PROP_FRAME_WIDTH, 1280);
-	capture.set(CV_CAP_PROP_FRAME_HEIGHT, 720);
 	capture.open(0);
 	if (!capture.isOpened()) { printf("--(!)Error opening video capture\n"); return -1; }
 
@@ -44,7 +41,7 @@ int main(void)
 		}
 
 		//-- 3. Apply the classifier to the frame
-		faceDetector.detect_and_display(frame);
+		face_detector.detect_and_display(frame);
 
 		auto c = waitKey(10);
 		if (static_cast<char>(c) == 27) { break; } // escape
