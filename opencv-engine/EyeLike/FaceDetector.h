@@ -13,7 +13,7 @@ using namespace std;
 class FaceDetector
 {
 public:
-	FaceDetector(CascadeClassifier& face_cascade, CascadeClassifier& eyes_cascade, double scale = 1, bool try_flip = false);
+	FaceDetector(CascadeClassifier& face_cascade, CascadeClassifier& eyes_cascade, double scale = 1);
 	~FaceDetector();
 	void detect_and_display(Mat& frame);
 private:

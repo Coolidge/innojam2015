@@ -1,4 +1,4 @@
-﻿Build started 19/02/2015 10:49:47.
+﻿Build started 19/02/2015 11:24:16.
      1>Project "C:\innojam2015\opencv-engine\EyeLike\EyeLike.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Programs\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\innojam2015\opencv-engine\packages\cpprestsdk.2.4.0.1\build\native\include\\" /IC:\opencv\build\x86\vc12\..\..\include /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D HAS_CPPRESTSDK /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -13,4 +13,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.80
+Time Elapsed 00:00:01.69

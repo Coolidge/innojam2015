@@ -3,7 +3,7 @@
 #include <opencv2/contrib/contrib.hpp>
 #include <fstream>
 
-FaceDetector::FaceDetector(CascadeClassifier& face_cascade, CascadeClassifier& eyes_cascade, double scale, bool try_flip)
+FaceDetector::FaceDetector(CascadeClassifier& face_cascade, CascadeClassifier& eyes_cascade, double scale)
 {
 	face_cascade_ = face_cascade;
 	eyes_cascade_ = eyes_cascade;
@@ -11,7 +11,6 @@ FaceDetector::FaceDetector(CascadeClassifier& face_cascade, CascadeClassifier& e
 	saved_faces_ = 0;
 	output_location_ = "data.txt";
 	scale_ = scale;
-	try_flip_ = try_flip_;
 }
 
 /** @function detect_and_display */
@@ -26,23 +25,12 @@ void FaceDetector::detect_and_display(Mat& frame)
 
 	//-- Detect faces
 	face_cascade_.detectMultiScale(small_frame, faces, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
-	
-	if (try_flip_)
-	{
-		flip(small_frame, small_frame, 1);
-		face_cascade_.detectMultiScale(small_frame, fliped_faces, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
-		for (vector<Rect>::const_iterator fliped_face = fliped_faces.begin(); fliped_face != fliped_faces.end(); ++fliped_face)
-		{
-			faces.push_back(Rect(small_frame.cols - fliped_face->x - fliped_face->width, fliped_face->y, fliped_face->width, fliped_face->height));
-		}
-	}
 
 	for (vector<Rect>::const_iterator face = faces.begin(); face != faces.end(); ++face)
 	{
 		Mat small_frame_ROI;
 		vector<Rect> eyes;
-		Point center;
-		Scalar color(255, 0, 255);
+		Point center;		
 		int radius;
 
 		auto aspect_ratio = static_cast<double>(face->width) / face->height;
@@ -51,13 +39,13 @@ void FaceDetector::detect_and_display(Mat& frame)
 			center.x = cvRound((face->x + face->width*0.5)*scale_);
 			center.y = cvRound((face->y + face->height*0.5)*scale_);
 			radius = cvRound((face->width + face->height)*0.25*scale_);
-			circle(frame, center, radius, color, 3, 8, 0);
+			circle(frame, center, radius, Scalar(255, 0, 255), 3, 8, 0);
 		} 
 		else
 		{
 			rectangle(frame, cvPoint(cvRound(face->x*scale_), cvRound(face->y*scale_)),
 				cvPoint(cvRound((face->x + face->width - 1)*scale_), cvRound((face->y + face->height - 1)*scale_)),
-				color, 3, 8, 0);			
+				Scalar(255, 0, 255), 3, 8, 0);
 		}
 		small_frame_ROI = small_frame(*face);		
 
@@ -69,7 +57,7 @@ void FaceDetector::detect_and_display(Mat& frame)
 			center.x = cvRound((face->x + face_center->x + face_center->width*0.5)*scale_);
 			center.y = cvRound((face->y + face_center->y + face_center->height*0.5)*scale_);
 			radius = cvRound((face_center->width + face_center->height)*0.25*scale_);
-			circle(frame, center, radius, color, 3, 8, 0);
+			circle(frame, center, radius, Scalar(255, 0, 0), 3, 8, 0);
 		}
 	}
 	//-- Show what you got	
@@ -80,15 +68,14 @@ void FaceDetector::detect_and_display(Mat& frame)
 		saved_faces_ = current_faces;
 		write_to_file(saved_faces_);
 	}
-	imshow(window_name_, frame);
-	setWindowProperty(window_name_, CV_WND_PROP_ASPECTRATIO, 1);
+	imshow(window_name_, frame);	
 }
 
-void FaceDetector::write_to_file(int numberOfFaces)
+void FaceDetector::write_to_file(int number_of_faces)
 {
 	ofstream output_;
 	output_.open(output_location_, ofstream::app);
-	output_ << to_string(numberOfFaces) + "\n";
+	output_ << to_string(number_of_faces) + "\n";
 	output_.close();
 }
 
