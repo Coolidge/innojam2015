@@ -25,3 +25,6 @@ Attention Detection!
 * After the lecture we can analyse the results and tell at which point there was a peak of attention 
 and when nobody was listening.
 * We can save the pictures from the lecture and to investigate what the audience loved.
+
+# Script for presentation
+https://docs.google.com/document/d/11onEu2_QrKlPjeuGM2TDZ3fKeMZ3XJEoWZZ3s1HqoTk/edit
