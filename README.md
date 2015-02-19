@@ -2,15 +2,16 @@
 Attention Detection!
 
 # OpenCV Engine
-* Detect frontal faces and write the number to a txt file.
+* Detects frontal faces and write the number to a txt file.
 
-# Ramzon
-* Reads from the txt file the number of faces.
-* Open LED light in the ramzor
-* Send POST request to save the number in the cloud. (trial application).
+# Ramzor
+* Reads from a txt file the number of faces.
+* Turns on a LED light in the ramzor
+* Sends POST request to a dedicated service to persist  the current number of faces. (trial application).
 
 # WebServer
-* Java application that has GET and POST APIs for the number of faces.
+* Java application that with GET and POST APIs to.
+* Each API updates\retrives the number of faces.
 
 * GET {{host}}/EyeLikeServlet/MainServlet
 * POST {{host}}/EyeLikeServlet/MainServlet?value=100
